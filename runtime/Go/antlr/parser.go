@@ -386,7 +386,7 @@ func (p *BaseParser) GetTokenStream() TokenStream {
 	return p.input
 }
 
-// Set the token stream and reset the parser.//
+// Set the token stream and Reset the parser.//
 func (p *BaseParser) SetTokenStream(input TokenStream) {
 	p.input = nil
 	p.reset()
