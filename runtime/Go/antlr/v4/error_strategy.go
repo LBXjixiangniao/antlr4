@@ -12,7 +12,7 @@ import (
 )
 
 type ErrorStrategy interface {
-	reset(Parser)
+	Reset(Parser)
 	RecoverInline(Parser) Token
 	Recover(Parser, RecognitionException)
 	Sync(Parser)
@@ -56,7 +56,7 @@ func NewDefaultErrorStrategy() *DefaultErrorStrategy {
 
 // <p>The default implementation simply calls {@link //endErrorCondition} to
 // ensure that the handler is not in error recovery mode.</p>
-func (d *DefaultErrorStrategy) reset(recognizer Parser) {
+func (d *DefaultErrorStrategy) Reset(recognizer Parser) {
 	d.endErrorCondition(recognizer)
 }
 

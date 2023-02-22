@@ -98,7 +98,7 @@ func (p *BaseParser) reset() {
 	if p.input != nil {
 		p.input.Seek(0)
 	}
-	p.errHandler.reset(p)
+	p.errHandler.Reset(p)
 	p.ctx = nil
 	p._SyntaxErrors = 0
 	p.SetTrace(nil)
